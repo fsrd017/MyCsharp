@@ -3,3 +3,17 @@
 ################################################################################
 
 /.vs
+/ShareDemo/.vs/LearnDepthCSharp/v16/Server/sqlite3/storage.ide
+/ShareDemo/.vs/LearnDepthCSharp/v16/Server/sqlite3/db.lock
+/ShareDemo/.vs/LearnDepthCSharp/v16/.suo
+/ShareDemo/ADO/ADO_UI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/ShareDemo/ADO/ADO_UI/obj/Debug/ADO_UI_MarkupCompile.i.lref
+/ShareDemo/ADO/ADO_UI/obj/Debug/ADO_UI_MarkupCompile.i.cache
+*.cache
+*.lref
+/MyWpfDemo/.vs/MyWpfDemo/v16/Server/sqlite3/storage.ide-wal
+/MyWpfDemo/.vs/MyWpfDemo/v16/Server/sqlite3/storage.ide-shm
+/MyWpfDemo/.vs/MyWpfDemo/v16/Server/sqlite3/storage.ide
+/MyWpfDemo/.vs/MyWpfDemo/v16/Server/sqlite3/db.lock
+/MyWpfDemo/.vs/MyWpfDemo/v16/.suo
+/MyWpfDemo/WpfApp1/obj/Debug
