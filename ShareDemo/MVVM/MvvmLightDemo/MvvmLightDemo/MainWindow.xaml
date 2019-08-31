@@ -1,0 +1,30 @@
+﻿<Window x:Class="MvvmLightDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MvvmLightDemo"
+        xmlns:vm="clr-namespace:MvvmLightDemo.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="90*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+
+        <!-- 依赖命令的Binding -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" >
+            <Button Command="{Binding NavToPrePage}">Nav To PrePage</Button>
+            <Button Command="{Binding NavToNextPage}">Nav To NextPage</Button>
+        </StackPanel>
+
+
+        <!-- 依赖属性的Binding -->
+        <Frame Content="{Binding MainWindowFrame}" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+        
+    </Grid>
+</Window>
