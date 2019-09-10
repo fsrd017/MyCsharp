@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Grid RenderTransformOrigin="0.523,0.317">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Grid.Row="0" Text="{Binding TextStr}" Grid.ColumnSpan="3"  MinHeight="50"  Margin="10" />
+            <Button Grid.Row="0" Command="{Binding OnButtonCommand}"  Content="button" Margin="10" />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListBox ItemsSource="{Binding ListSource}" Margin="10" />
+            <Button Content="添加一个string" Command="{Binding  AddStringToList}"></Button>
+        </StackPanel>
     </Grid>
 </Window>

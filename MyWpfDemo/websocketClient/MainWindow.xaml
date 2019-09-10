@@ -1,0 +1,15 @@
+﻿<Window x:Name="window" x:Class="websocketClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:websocketClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="297.17" Width="293.396" VerticalAlignment="Bottom">
+    <StackPanel>
+        <Button Name="sendReq" Click="SendReq_Click" Content="发送请求" Margin="10" Height="55" />
+        <Button Name="sendMsg" Click="SendMsg_Click" Content="发送消息" Margin="10" Height="55" />
+        <Button Name="close" Click="Close_Click" Content="关闭socket" Margin="10" Height="55" />
+        <TextBlock  Margin="10" Text="result" Name="TextStr" />
+    </StackPanel>
+</Window>
