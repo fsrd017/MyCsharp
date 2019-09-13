@@ -94,5 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resouse\Bank transactions_24.png" />
+    <Content Include="resouse\button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="resouse\数据库.png" />
+    <Resource Include="resouse\数据库维护服务.png" />
+    <Resource Include="resouse\rds_mysql 云数据库RDS My.png" />
+    <Resource Include="resouse\train.png" />
+    <Resource Include="resouse\button_24.png" />
+    <Resource Include="resouse\button_16.png" />
+    <Resource Include="resouse\button_32.png" />
+    <Resource Include="resouse\button_48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

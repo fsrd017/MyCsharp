@@ -24,5 +24,15 @@ namespace MainWindows
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            listBox.Width = 0;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            listBox.Width = 140;
+        }
     }
 }
