@@ -24,7 +24,7 @@
                 <MenuItem Header="panda">
                 </MenuItem>
                 <MenuItem Header="库检" />
-                <Separator></Separator> ;;是
+                <Separator></Separator>
                 <MenuItem Header="其他" />
             </MenuItem>
 
