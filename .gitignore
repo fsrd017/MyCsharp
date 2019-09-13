@@ -22,3 +22,6 @@
 /MyWpfDemo/.vs/Supercharger/websocketClient
 /MyWpfDemo/websocketClient/bin/Debug
 /MyWpfDemo/websocketClient/obj/Debug
+/MyWpfDemo/.vs/Supercharger/MainWindows
+/MyWpfDemo/MainWindows/bin/Debug
+/MyWpfDemo/MainWindows/obj/Debug
