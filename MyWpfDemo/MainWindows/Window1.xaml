@@ -1,0 +1,61 @@
+﻿<Window x:Class="MainWindows.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainWindows"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Row="0" Grid.Column="0">
+            <TreeView>
+                <TreeViewItem Header="A00">
+                    <TreeViewItem Header="A01" />
+                    <TreeViewItem Header="A02" />
+                    <TreeViewItem Header="A03" />
+                    <TreeViewItem Header="A04" />
+                </TreeViewItem>
+                <TreeViewItem Header="B00">
+                    <TreeViewItem Header="B01" />
+                    <TreeViewItem Header="B02" />
+                    <TreeViewItem Header="B03" />
+                    <TreeViewItem Header="B04" />
+                </TreeViewItem>
+                <TreeViewItem Header="C00">
+                    <TreeViewItem Header="C01" />
+                    <TreeViewItem Header="C02" />
+                    <TreeViewItem Header="C03" />
+                    <TreeViewItem Header="C04" />
+                </TreeViewItem>
+                <TreeViewItem Header="D00">
+                    <TreeViewItem Header="D01" />
+                    <TreeViewItem Header="D02" />
+                    <TreeViewItem Header="D03" />
+                    <TreeViewItem Header="D04" />
+                </TreeViewItem>
+            </TreeView>
+        </DockPanel>
+        <GridSplitter  Grid.Row="0" Grid.Column="1" Width="3" Margin="2,0,2,0" Background="Purple"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Left" />
+        <DockPanel Grid.Row="0" Grid.Column="2">
+            <ListView>
+                <ListViewItem>E00</ListViewItem>
+                <ListViewItem>F00</ListViewItem>
+                <ListViewItem>G00</ListViewItem>
+                <ListViewItem>H00</ListViewItem>
+                <ListViewItem>I00</ListViewItem>
+                <ListViewItem>J00</ListViewItem>
+                <ListViewItem>K00</ListViewItem>
+                <ListViewItem>L00</ListViewItem>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</Window>

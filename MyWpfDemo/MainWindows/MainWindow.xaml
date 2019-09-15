@@ -8,7 +8,7 @@
         Title="数据库配置系统" Height="450" Width="800" Icon="resouse/数据库.png">
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width= "150" />
+            <ColumnDefinition Width= "auto" />
             <ColumnDefinition />
             <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
@@ -35,7 +35,7 @@
 
         <ToolBarTray Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="99" VerticalAlignment="Center">
             <ToolBar>
-                <Button Click="Button_Click">
+                <Button>
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="resouse/button_24.png" VerticalAlignment="Center" />
@@ -44,7 +44,7 @@
                 </Button>
             </ToolBar>
             <ToolBar>
-                <Button Click="Button_Click_1">
+                <Button>
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="resouse/Bank transactions_24.png" VerticalAlignment="Center" />
@@ -55,11 +55,24 @@
             </ToolBar>
         </ToolBarTray>
 
-        <ListBox Name="listBox" Grid.Row="2" Grid.Column="0">
-            <ListBoxItem Content="111111111" />
-            <ListBoxItem Content="222222222222" />
-            <ListBoxItem Content="3333333333333" />
-        </ListBox>
+        <TreeView Name="myTreeView" Grid.Row="2" Grid.Column="0" IsEnabled="True">
+            <TreeViewItem Header=" 11111">
+                <TreeViewItem Header="Dominik">
+                    <TreeViewItem Header="Dominik" />
+                    <TreeViewItem Header="Paiha" />
+                    <TreeViewItem Header="98765" />
+                </TreeViewItem>
+                <TreeViewItem Header="Paiha" />
+                <TreeViewItem Header="98765" />
+            </TreeViewItem>
+            <TreeViewItem Header="333" />
+            <TreeViewItem Header="444" />
+            <TreeViewItem Header="555" />
+            <TreeViewItem Header="666" />
+        </TreeView>
+
+        <GridSplitter Grid.Row="2" Grid.Column="1" Width="5" Margin="2,0"
+                      VerticalAlignment="Stretch" HorizontalAlignment="Left" Grid.RowSpan="99" />
 
         <StatusBar Grid.Row="3" Grid.Column="0" Height="26" VerticalAlignment="Bottom" Grid.ColumnSpan="99">
             <StatusBar.ItemsPanel>
