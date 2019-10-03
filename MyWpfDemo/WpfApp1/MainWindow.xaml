@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:Helper="clr-namespace:WpfApp1.Helper"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
@@ -18,7 +19,11 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
             <ListBox ItemsSource="{Binding ListSource}" Margin="10" />
-            <Button Content="添加一个string" Command="{Binding  AddStringToList}"></Button>
+            <Button Content="添加一个string" Command="{Binding AddStringToList}"></Button>
+            <Slider Margin="5" BorderBrush="Black" BorderThickness="2" />
+            <PasswordBox Helper:PasswordHelper.Attach="True"
+                         Helper:PasswordHelper.Password="{Binding Path=Password, Mode=TwoWay,
+                                                          UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
     </Grid>
 </Window>
