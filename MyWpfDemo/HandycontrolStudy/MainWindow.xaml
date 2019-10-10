@@ -11,8 +11,36 @@
         <StackPanel>
             <hc:CalendarWithClock></hc:CalendarWithClock>
             <hc:Clock></hc:Clock>
-            <hc:DateTimePicker></hc:DateTimePicker>
-            <hc:ListClock />
+            <hc:ProgressButton  Width="99" />
+            <hc:DateTimePicker ShowClearButton="True" />
+            <DatePicker />
+            <hc:Badge Value="100" BadgeMargin="0,-14,-20,0" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgeDanger}">
+                <Button Content="11111111111" />
+            </hc:Badge>
+            <TreeView>
+            </TreeView>
+            <!--<hc:TransitioningContentControl>-->
+            <StackPanel Margin="32" Orientation="Horizontal">
+                <hc:Badge Text="New" BadgeMargin="0,-14,-20,0" Height="30">
+                    <Button Content="11" />
+                </hc:Badge>
+                <hc:Badge Text="New11" BadgeMargin="0,-14,-20,0" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgeDanger}">
+                    <Button Content="22" />
+                </hc:Badge>
+                <hc:Badge Value="{Binding Count}" BadgeMargin="0,-14,-10,0" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgePrimary}">
+                    <Button Content="33" Command="{Binding CountCmd}" />
+                </hc:Badge>
+                <hc:Badge Value="22" BadgeMargin="0,-14,-20,0" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgeDanger}">
+                    <Button Content="3344" />
+                </hc:Badge>
+                <hc:Badge Status="Dot" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgeDanger}">
+                    <Button Content="55" />
+                </hc:Badge>
+                <hc:Badge Status="Processing" Height="30" Margin="32,0,0,0" Style="{StaticResource BadgeDanger}">
+                    <Button Content="66" />
+                </hc:Badge>
+            </StackPanel>
+            <!--</hc:TransitioningContentControl>-->
         </StackPanel>
     </Grid>
 </Window>

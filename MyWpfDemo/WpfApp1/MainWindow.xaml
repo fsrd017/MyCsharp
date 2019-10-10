@@ -24,6 +24,8 @@
             <PasswordBox Helper:PasswordHelper.Attach="True"
                          Helper:PasswordHelper.Password="{Binding Path=Password, Mode=TwoWay,
                                                           UpdateSourceTrigger=PropertyChanged}" />
+            <UserControl>
+            </UserControl>
         </StackPanel>
     </Grid>
 </Window>

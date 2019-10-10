@@ -1,0 +1,31 @@
+﻿<Window x:Class="OnlyTest.DatagridTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="388" Width="325.5">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <CheckBox Name="chkResult" Content="查看数据" Margin="3" Grid.Row="0" Grid.Column="1" Click="chkResult_Click" />
+        <ListBox Name="lbxData" Visibility="Hidden" Grid.Row="1" Grid.ColumnSpan="2" />
+        <ComboBox Name="cbbSelectMode" Margin="2" SelectionChanged="cbbSelectMode_SelectionChanged" />
+        <!--<DataGrid Name="dtgShow" AutoGenerateColumns="False" Margin="3" Grid.Row="1" Grid.ColumnSpan="2" LoadingRow="dtgShow_LoadingRow" PreviewKeyDown="dtgShow_PreviewKeyDown" SelectedCellsChanged="dtgShow_SelectedCellsChanged" />-->
+        <DataGrid Name="dtgShow" AutoGenerateColumns="False" Margin="3" Grid.Row="1" Grid.ColumnSpan="2" />
+        <TextBox Name="tbxSelect" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Button  Name="btnAppend" Content="Append" Margin="3" Grid.Row="3" Grid.Column="0" Click="btnAppend_Click" />
+        <Button Name="btnRemoveLast" Content="Remove Last" Margin="3" Grid.Row="3" Grid.Column="1" Click="btnRemoveLast_Click" />
+        <Button  Name="btnInsert" Content="Insert" Margin="3" Grid.Row="4" Grid.Column="0" Click="btnInsert_Click" />
+        <Button  Name="btnRemoveSelect" Content="Remove Selected" Margin="3" Grid.Row="4" Grid.Column="1" Click="btnRemoveSelect_Click" />
+    </Grid>
+</Window>
