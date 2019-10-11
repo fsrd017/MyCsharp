@@ -21,7 +21,17 @@
         <ListBox Name="lbxData" Visibility="Hidden" Grid.Row="1" Grid.ColumnSpan="2" />
         <ComboBox Name="cbbSelectMode" Margin="2" SelectionChanged="cbbSelectMode_SelectionChanged" />
         <!--<DataGrid Name="dtgShow" AutoGenerateColumns="False" Margin="3" Grid.Row="1" Grid.ColumnSpan="2" LoadingRow="dtgShow_LoadingRow" PreviewKeyDown="dtgShow_PreviewKeyDown" SelectedCellsChanged="dtgShow_SelectedCellsChanged" />-->
-        <DataGrid Name="dtgShow" AutoGenerateColumns="False" Margin="3" Grid.Row="1" Grid.ColumnSpan="2" />
+
+        <DataGrid Name="dtgShow" AutoGenerateColumns="False" Margin="3" Grid.Row="1" Grid.ColumnSpan="2">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBox Text="111111111111111111" />
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+
         <TextBox Name="tbxSelect" Grid.Row="2" Grid.ColumnSpan="2" />
         <Button  Name="btnAppend" Content="Append" Margin="3" Grid.Row="3" Grid.Column="0" Click="btnAppend_Click" />
         <Button Name="btnRemoveLast" Content="Remove Last" Margin="3" Grid.Row="3" Grid.Column="1" Click="btnRemoveLast_Click" />

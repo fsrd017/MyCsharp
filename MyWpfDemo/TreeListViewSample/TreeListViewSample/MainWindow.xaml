@@ -1,0 +1,24 @@
+﻿<Window x:Class="TreeListViewSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TreeListViewSample.Controls"
+        Title="MainWindow" Height="620" Width="850"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <local:TreeListView x:Name="treeList" Background="#FFE9E9E9" BorderBrush="#FF96DFFF"
+                            AlternationCount="2" ItemsSource="{Binding StaffList}">
+            <local:TreeListView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding StaffList}" />
+            </local:TreeListView.ItemTemplate>
+        </local:TreeListView>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="15,0"  Content="ChangeNode1" Width="100" Height="26" Click="Button_Click" />
+            <Button Content="ChangeNode2" Width="100" Height="26" Click="Button_Click_1" />
+        </StackPanel>
+    </Grid>
+</Window>
