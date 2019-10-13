@@ -24,6 +24,12 @@
    </Window.Resources>
    <Grid Background="White">
       <DataGrid x:Name="dataGrid1"  AutoGenerateColumns="False">
+         <DataGrid.ContextMenu>
+            <ContextMenu>
+               <MenuItem Header="查询模式" IsCheckable ="True" IsChecked="{Binding FlterEnableBoolean, Mode=TwoWay}" />
+            </ContextMenu>
+         </DataGrid.ContextMenu>
+
          <DataGrid.GroupStyle>
             <GroupStyle>
                <GroupStyle.ContainerStyle>
@@ -31,20 +37,31 @@
                      <Setter Property="Template">
                         <Setter.Value>
                            <ControlTemplate>
-                              <Grid>
-                                 <Expander BorderThickness="5,0,0,0" IsExpanded="True" VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True">
-                                    <Expander.Header>
-                                       <StackPanel Orientation="Horizontal">
-                                          <Label Content="{Binding Name}" />
-                                          <TextBlock Text="111111111" VerticalAlignment="Center" />
-                                       </StackPanel>
-                                    </Expander.Header>
-                                    <Expander.Content>
-                                       <Border>
-                                          <ItemsPresenter />
-                                       </Border>
-                                    </Expander.Content>
-                                 </Expander>
+
+                              <Grid Margin="5">
+                                 <Border x:Name="outerBorder"
+                                BorderThickness="1"
+                                BorderBrush="#FFFFFFFD"
+                                Margin="0" Padding="0">
+                                    <Border x:Name="innerBorder"
+                                    BorderThickness="1"
+                                    BorderBrush="#FFC6C6C6"
+                                    Background="{TemplateBinding Background}"
+                                    Padding="{TemplateBinding Padding}">
+
+                                       <Expander  IsExpanded="True" VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True">
+                                          <Expander.Header>
+                                             <StackPanel Orientation="Horizontal">
+                                                <Label Content="{Binding Name}" />
+                                                <TextBlock Text="{Binding ItemCount}" VerticalAlignment="Center" />
+                                             </StackPanel>
+                                          </Expander.Header>
+                                          <Expander.Content>
+                                             <ItemsPresenter />
+                                          </Expander.Content>
+                                       </Expander>
+                                    </Border>
+                                 </Border>
                               </Grid>
                            </ControlTemplate>
                         </Setter.Value>
@@ -88,22 +105,22 @@
                         <Setter.Value>
                            <ControlTemplate>
                               <Grid Margin="5,0,0,0">
-                                 -->
-         <!--<Grid.RowDefinitions>
+
+                                 <Grid.RowDefinitions>
                                     <RowDefinition />
                                     <RowDefinition />
-                                 </Grid.RowDefinitions>-->
-         <!--
+                                 </Grid.RowDefinitions>
+
                                  <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto" />
                                     <ColumnDefinition Width="*" />
                                  </Grid.ColumnDefinitions>
 
-                                 <Label Background="Yellow" Content="{Binding Name}" BorderThickness="2" BorderBrush="Red" />
-                                 -->
-         <!--<Label Grid.Column="0" Grid.Row="1" Content="{Binding ItemCount}"  BorderThickness="2" BorderBrush="Black" VerticalAlignment="Stretch" />-->
-         <!--
-                                 <Grid Grid.Column="1" Grid.Row="0" Margin="5,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                 <Label Background="Orange" Content="{Binding Name}"  Grid.ColumnSpan="2" />
+
+                                 <Label Grid.Column="0" Grid.Row="1" Content="{Binding ItemCount}"  BorderThickness="1,1,1,1" BorderBrush="Black" VerticalAlignment="Stretch" />
+
+                                 <Grid Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                                     <ItemsPresenter />
                                  </Grid>
                               </Grid>
@@ -114,6 +131,7 @@
                </GroupStyle.ContainerStyle>
             </GroupStyle>
          </DataGrid.GroupStyle>-->
+
          <DataGrid.Columns>
             <DataGridTextColumn Header="File" Binding="{Binding Name}" Width="66" />
             <DataGridTextColumn Header="Attachment Name" Binding="{Binding Sex}" Width="*" />

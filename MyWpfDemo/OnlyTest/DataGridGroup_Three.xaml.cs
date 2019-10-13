@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +18,13 @@ using System.Windows.Shapes;
 namespace OnlyTest {
 
     /// <summary>
-    /// DataGridGroup.xaml 的交互逻辑
+    /// DataGridGroup_Three.xaml 的交互逻辑
     /// </summary>
-    public partial class DataGridGroupTwo : Window {
+    public partial class DataGridGroup_Three : Window {
 
         private ObservableCollection<Model> data = new ObservableCollection<Model>();
 
-        public DataGridGroupTwo()
+        public DataGridGroup_Three()
         {
             InitializeComponent();
 
@@ -34,8 +35,6 @@ namespace OnlyTest {
             }
             ICollectionView vw = CollectionViewSource.GetDefaultView(data);
             vw.GroupDescriptions.Add(new PropertyGroupDescription("Sex"));
-
-            //vw.GroupDescriptions.Add(new PropertyGroupDescription("Category"));
         }
 
         private Model CreateModel(string name, string cate, string sex)
@@ -47,5 +46,4 @@ namespace OnlyTest {
             return model;
         }
     }
-
 }

@@ -6,38 +6,38 @@
         xmlns:local="clr-namespace:OnlyTest"
         mc:Ignorable="d"
         Title="DataGridGroup" Height="450" Width="800">
-    <Window.Resources>
-        <Style x:Key="GroupHeaderStyle" TargetType="{x:Type GroupItem}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type GroupItem}">
-                        <Expander IsExpanded="True">
-                            <Expander.Header>
-                                <TextBlock Text="{Binding Path=Name}" />
-                            </Expander.Header>
-                            <ItemsPresenter />
-                        </Expander>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-    <Grid>
-        <DataGrid x:Name="dataGrid1"  AutoGenerateColumns="False" Margin="10">
-            <DataGrid.GroupStyle>
-                <GroupStyle ContainerStyle="{StaticResource GroupHeaderStyle}">
-                    <GroupStyle.Panel>
-                        <ItemsPanelTemplate>
-                            <DataGridRowsPresenter />
-                        </ItemsPanelTemplate>
-                    </GroupStyle.Panel>
-                </GroupStyle>
-            </DataGrid.GroupStyle>
+   <Window.Resources>
+      <Style x:Key="GroupHeaderStyle" TargetType="{x:Type GroupItem}">
+         <Setter Property="Template">
+            <Setter.Value>
+               <ControlTemplate TargetType="{x:Type GroupItem}">
+                  <Expander IsExpanded="True">
+                     <Expander.Header>
+                        <TextBlock Text="{Binding Path=Name}" />
+                     </Expander.Header>
+                     <ItemsPresenter />
+                  </Expander>
+               </ControlTemplate>
+            </Setter.Value>
+         </Setter>
+      </Style>
+   </Window.Resources>
+   <Grid>
+      <DataGrid x:Name="dataGrid1"  AutoGenerateColumns="False" Margin="10" CanUserAddRows="False">
+         <DataGrid.GroupStyle>
+            <GroupStyle ContainerStyle="{StaticResource GroupHeaderStyle}">
+               <GroupStyle.Panel>
+                  <ItemsPanelTemplate>
+                     <DataGridRowsPresenter />
+                  </ItemsPanelTemplate>
+               </GroupStyle.Panel>
+            </GroupStyle>
+         </DataGrid.GroupStyle>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="File" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Attachment Name" Binding="{Binding Sex}" />
-            </DataGrid.Columns>
-        </DataGrid>
-    </Grid>
+         <DataGrid.Columns>
+            <DataGridTextColumn Header="File" Binding="{Binding Name}" />
+            <DataGridTextColumn Header="Attachment Name" Binding="{Binding Sex}"  Width="*" />
+         </DataGrid.Columns>
+      </DataGrid>
+   </Grid>
 </Window>
